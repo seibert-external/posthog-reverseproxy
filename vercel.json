@@ -4,11 +4,17 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "https://us.i.posthog.com/static/$1"
+      "dest": "https://eu.i.posthog.com/static/$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     },
     {
       "src": "/(.*)",
-      "dest": "https://us.i.posthog.com/$1"
+      "dest": "https://eu.i.posthog.com/$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     }
   ]
 }
